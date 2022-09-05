@@ -1,0 +1,419 @@
+body{
+    background-color: rgb(23, 23, 23);
+    text-align: center;
+}
+p{
+    font-family: 'Barlow', sans-serif;
+    font-size: 1.2rem;
+    line-height: 2.2rem;
+    font-weight: bold;
+}
+
+
+/* Navbar */
+.game-title{
+    margin: 0px 50px 50px;
+}
+.game-title h1{
+    margin: 0px;
+    font-family: 'Silkscreen', cursive;
+    font-size: 8rem;
+    letter-spacing: 0.8rem;
+    color: #DA0037;
+}
+.help-icon button{
+    background-color: #171717;
+    position: absolute;
+    top: 100px;
+    right: 200px;
+    border-width: 0px;
+    border-radius: 100%;
+}
+img.help-icon{
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+
+/* Content */
+.content{
+    width: 50%;
+    margin: auto;
+}
+.content h1{
+    margin: 0px;
+    font-family: 'Silkscreen', cursive;
+    font-size: 3rem;
+    letter-spacing: 0.2rem;
+    color: #DA0037;
+}
+.row{
+    display: flex;
+    flex-direction: row;
+    margin: 50px 100px;
+}
+.btn{
+    width: 200px;
+    height: 200px;
+    margin: auto;
+    border-radius: 30px;
+    border: 10px outset;
+}
+#green{
+    background-color: rgb(22, 138, 22);
+    border-color: green;
+}
+#red{
+    background-color: rgb(253, 33, 33);
+    border-color:  red;
+}
+#yellow{
+    background-color: rgb(253, 253, 39);
+    border-color: yellow;
+}
+#blue{
+    background-color: rgb(35, 35, 252);
+    border-color: blue;
+}
+.btn.pressed{
+    animation: press 0.5s ease forwards;
+    border:  10px ridge;
+}
+.game-over{
+    animation: over 0.5s ease 2 forwards;
+}
+@keyframes press {
+    0%{
+        transform: scale(1);
+    }
+    25%{
+        transform: scale(0.85); 
+    }
+    50%{
+        transform: scale(0.75);
+    }
+    75%{
+        transform: scale(0.85); 
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+@keyframes over {
+    from{
+        background-color: red;
+    }
+    to{
+        background-color: #171717;
+    }
+}
+
+
+/* Help */
+.help-title{
+    display: inline-block;
+}
+#blur{
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(20px);
+    position:fixed;
+    top:0px;
+}
+#help-popup{
+    text-align: left;
+    padding: 50px;
+    background-color:antiquewhite;
+    width:50%;
+    position: relative;
+    transform: translate(-50%,-50%);
+    border-radius: 10px;
+    box-shadow: 10px 5px rgb(0,0,0,0.30);
+    animation: help-bar 0.5s ease forwards;
+}
+.help h1{
+    font-family: 'Silkscreen', cursive;
+    font-size: 3rem;
+    letter-spacing: 0.1;
+    line-height: 3.5rem;
+    color: #DA0037;
+}
+.help button{
+    position: relative;
+    left:450px;
+    border: 0px;
+    background-color:antiquewhite;
+}
+img.close{
+    width: 40px;
+    height: 40px;
+}
+@keyframes help-bar {
+    0%{
+        top:40%;
+        left:60%;
+        visibility: hidden;
+        opacity: 0;
+    }
+    100%{
+        top:50%;
+        left:50%;
+        filter: blur(0px);
+        visibility:visible;
+        opacity: 1;
+    }
+}
+
+
+@media (max-width: 575.98px) { 
+    p{
+        font-size: 0.9rem;
+        font-weight:400;
+        line-height: 1.4rem;
+    }
+    /* Navbar */
+    .game-title{
+        margin: 30px 20px 20px;
+    }
+    .game-title h1{
+        font-size: 4rem;
+        letter-spacing: 0.2rem;
+    }
+    .help-icon button{
+        top: 50px;
+        right:20px;
+    }
+    img.help-icon{
+        width: 30px;
+        height: 30px;
+    }
+    /* Content */
+    .content{
+        width: 80%;
+        margin: 20px auto;
+    }
+    .content h1{
+        font-size: 1.5rem;
+        letter-spacing: 0.1rem;
+    }
+    .list{
+        padding: 10px;
+        margin: 0px;
+    }
+    .row{
+        margin: 60px 0px 20px;
+    }
+    .btn{
+        width: 120px;
+        height: 120px;
+        border: 3px outset;
+    }
+    /* Help */
+    #help-popup{
+        width: 75%;
+        padding: 15px;
+    }
+    .help h1{
+        font-size: 1.4rem;
+        letter-spacing: 0.1;
+        line-height: 1rem;
+    }
+    .help button{
+        left: 90px;
+    }
+    img.close{
+        width: 20px;
+        height: 20px;
+    }
+}
+@media (min-width: 480px) and (max-width: 575.98px){ 
+    .help button{
+        left: 180px;
+    }
+}
+@media (min-width: 576px) and (max-width: 999.98px){ 
+    p{
+        font-size: 1rem;
+        font-weight:400;
+        line-height: 1.7rem;
+    }
+    /* Navbar */
+    .game-title{
+        margin: 50px 40px 50px;
+    }
+    .game-title h1{
+        font-size: 6rem;
+        letter-spacing: 0.3rem;
+    }
+    .help-icon button{
+        top: 60px;
+        right:60px;
+    }
+    img.help-icon{
+        width: 35px;
+        height: 35px;
+    }
+    /* Content */
+    .content{
+        width: 80%;
+        margin: 70px auto;
+    }
+    .content h1{
+        font-size: 2rem;
+        letter-spacing: 0.3rem;
+    }
+    .list{
+        padding: 20px;
+        margin: 0px;
+    }
+    .row{
+        margin: 70px 10px 20px;
+    }
+    .btn{
+        width: 150px;
+        height: 150px;
+        border: 5px outset;
+    }
+    /* Help */
+    #help-popup{
+        width: 70%;
+        padding: 20px;
+    }
+    .help h1{
+        font-size: 1.8rem;
+        letter-spacing: 0.1;
+        line-height: 1.5rem;
+    }
+    .help button{
+        left: 175px;
+    }
+    img.close{
+        width: 25px;
+        height: 25px;
+    }
+} 
+@media (min-width: 750px) and (max-width: 999.98px){
+    .help button{
+        left: 295px;
+    }
+} 
+@media (min-width: 1000px) and (max-width: 1399px){
+    p{
+        font-size: 1.1rem;
+        font-weight:400;
+        line-height: 1.9rem;
+    }
+    /* Navbar */
+    .game-title{
+        margin: 0px 120px 30px;
+    }
+    .game-title h1{
+        font-size: 6rem;
+        letter-spacing: 0.5rem;
+    }
+    .help-icon button{
+        top: 80px;
+        right:80px;
+    }
+    img.help-icon{
+        width: 45px;
+        height: 45px;
+    }
+    /* Content */
+    .content{
+        width: 70%;
+        margin: 20px auto 30px;
+    }
+    .content h1{
+        font-size: 2.2rem;
+        letter-spacing: 0.5rem;
+    }
+    .list{
+        padding: 20px;
+        margin: 0px;
+    }
+    .row{
+        margin: 40px 120px 10px;
+    }
+    .btn{
+        width: 160px;
+        height: 160px;
+        border: 5px outset;
+    }
+    /* Help */
+    #help-popup{
+        width: 65%;
+        padding: 20px;
+    }
+    .help h1{
+        font-size: 1.9rem;
+        letter-spacing: 0.2;
+        line-height: 2rem;
+    }
+    .help button{
+        left: 395px;
+    }
+    img.close{
+        width: 30px;
+        height: 30px;
+    }
+}
+@media (min-width: 1200px) and (max-width: 1399px){
+    .help button{
+        left: 520px;
+    }
+}
+@media (min-width: 1400px) and (max-width: 1599px){ 
+    p{
+        font-size: 1.1rem;
+        line-height: 1.9rem;
+    }
+    /* Navbar */
+    .game-title{
+        margin: 20px 120px 30px;
+    }
+    .game-title h1{
+        font-size: 7rem;
+        letter-spacing: 0.5rem;
+    }
+    .help-icon button{
+        top: 100px;
+        right:100px;
+    }
+    /* Content */
+    .content{
+        width: 60%;
+        margin: 30px auto 30px;
+    }
+    .content h1{
+        font-size: 2.3rem;
+        letter-spacing: 0.5rem;
+    }
+    .list{
+        padding: 20px;
+        margin: 0px;
+    }
+    .row{
+        margin: 50px 140px 20px;
+    }
+    .btn{
+        width: 180px;
+        height: 180px;
+        border: 7px outset;
+    }
+    /* Help */
+    #help-popup{
+        width: 60%;
+        padding: 30px;
+    }
+    .help h1{
+        font-size: 2.1rem;
+        letter-spacing: 0.2;
+        line-height: 2rem;
+    }
+    .help button{
+        left: 560px;
+    }
+} 
