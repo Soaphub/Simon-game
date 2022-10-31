@@ -1,37 +1,62 @@
+*{
+    box-sizing: border-box;
+}
+
+:root{
+    --margin: 3.1rem;
+
+    --content-screen-width: 50%;
+
+    --para-font-size: 1.2rem;
+    --para-line-height: 2.2rem;
+    --para-font-weight: bold;
+    --title-font-size: 10rem;
+    --title-letter-spacing: 0.8rem;
+    --sub-title-letter-spacing: 3rem;
+    --sub-title-font-size: 0.2rem;
+    --help-title-font-size: 3rem;
+    --help-title-letter-spacing: 0.1rem;
+    --help-title-line-height: 3.5rem;
+
+    --simon-button-width: 12.5rem;
+    --simon-button-border-thickness: 0.6rem;
+    --help-icon-width: 3.1rem; 
+}
+
 body{
     background-color: rgb(23, 23, 23);
     text-align: center;
 }
 p{
     font-family: 'Barlow', sans-serif;
-    font-size: 1.2rem;
-    line-height: 2.2rem;
-    font-weight: bold;
+    font-size: var(--para-font-size);
+    line-height: var(--para-line-height);
+    font-weight: var(--para-font-weight);
 }
 
 
 /* Navbar */
 .game-title{
-    margin: 0px 50px 50px;
+    margin: var(--margin) 0;
 }
 .game-title h1{
     margin: 0px;
     font-family: 'Silkscreen', cursive;
-    font-size: 8rem;
-    letter-spacing: 0.8rem;
+    font-size: var(--title-font-size);
+    letter-spacing: var(--title-letter-spacing);
     color: #DA0037;
 }
 .help-icon button{
     background-color: #171717;
     position: absolute;
-    top: 100px;
-    right: 200px;
+    top: calc( var(--margin) + calc( var(--title-font-size) / 2));
+    right: 10%;
     border-width: 0px;
     border-radius: 100%;
 }
 img.help-icon{
-    width: 50px;
-    height: 50px;
+    width: var(--help-icon-width);
+    height: var(--help-icon-width);
     background-color: white;
     border-radius: 50%;
 }
@@ -39,27 +64,27 @@ img.help-icon{
 
 /* Content */
 .content{
-    width: 50%;
+    width: var(--content-screen-width);
     margin: auto;
 }
-.content h1{
+.content h2{
     margin: 0px;
     font-family: 'Silkscreen', cursive;
-    font-size: 3rem;
-    letter-spacing: 0.2rem;
+    font-size: var(--sub-title-font-size);
+    letter-spacing: var(--sub-title-letter-spacing);
     color: #DA0037;
 }
 .row{
     display: flex;
     flex-direction: row;
-    margin: 50px 100px;
+    margin: var(--margin) calc(var(--margin) * 2);
 }
 .btn{
-    width: 200px;
-    height: 200px;
+    width: var(--simon-button-width);
+    height: var(var(--simon-button-width));
     margin: auto;
     border-radius: 30px;
-    border: 10px outset;
+    border: var(--simon-button-border-thickness) outset;
 }
 #green{
     background-color: rgb(22, 138, 22);
@@ -79,7 +104,7 @@ img.help-icon{
 }
 .btn.pressed{
     animation: press 0.5s ease forwards;
-    border:  10px ridge;
+    border:  var(--simon-button-border-thickness) ridge;
 }
 .game-over{
     animation: over 0.5s ease 2 forwards;
@@ -124,31 +149,29 @@ img.help-icon{
 }
 #help-popup{
     text-align: left;
-    padding: 50px;
+    padding: var(--margin);
     background-color:antiquewhite;
-    width:50%;
+    width: var(--content-screen-width);
     position: relative;
     transform: translate(-50%,-50%);
-    border-radius: 10px;
+    border-radius: var(--simon-button-border-thickness);
     box-shadow: 10px 5px rgb(0,0,0,0.30);
     animation: help-bar 0.5s ease forwards;
 }
-.help h1{
+.help h3{
     font-family: 'Silkscreen', cursive;
-    font-size: 3rem;
-    letter-spacing: 0.1;
-    line-height: 3.5rem;
+    font-size: var(--help-title-font-size);
+    letter-spacing: var(--help-title-letter-spacing);
+    line-height: var(--help-title-line-height);
     color: #DA0037;
 }
 .help button{
-    position: relative;
-    left:450px;
     border: 0px;
     background-color:antiquewhite;
 }
 img.close{
-    width: 40px;
-    height: 40px;
+    width: var(--help-icon-width);
+    height: var(--help-icon-width);
 }
 @keyframes help-bar {
     0%{
@@ -168,64 +191,33 @@ img.close{
 
 
 @media (max-width: 575.98px) { 
-    p{
-        font-size: 0.9rem;
-        font-weight:400;
-        line-height: 1.4rem;
-    }
-    /* Navbar */
-    .game-title{
-        margin: 30px 20px 20px;
-    }
-    .game-title h1{
-        font-size: 4rem;
-        letter-spacing: 0.2rem;
-    }
-    .help-icon button{
-        top: 50px;
-        right:20px;
-    }
-    img.help-icon{
-        width: 30px;
-        height: 30px;
-    }
-    /* Content */
-    .content{
-        width: 80%;
-        margin: 20px auto;
-    }
-    .content h1{
-        font-size: 1.5rem;
-        letter-spacing: 0.1rem;
+    :root{
+        --margin: 1.9rem;
+    
+        --content-screen-width: 80%;
+    
+        --para-font-size: 0.9rem;
+        --para-line-height: 1.4rem;
+        --para-font-weight: 400;
+        --title-font-size: 4rem;
+        --title-letter-spacing: 0.2rem;
+        --sub-title-letter-spacing: 0.1rem;
+        --sub-title-font-size: 1.5rem;
+        --help-title-font-size: 1.4rem;
+        --help-title-letter-spacing: 0.1rem;
+        --help-title-line-height: 1rem;
+    
+        --simon-button-width: 7.5rem;
+        --simon-button-border-thickness: 0.2rem;
+        --help-icon-width: 1.9rem; 
     }
     .list{
         padding: 10px;
         margin: 0px;
     }
-    .row{
-        margin: 60px 0px 20px;
-    }
-    .btn{
-        width: 120px;
-        height: 120px;
-        border: 3px outset;
-    }
     /* Help */
-    #help-popup{
-        width: 75%;
-        padding: 15px;
-    }
-    .help h1{
-        font-size: 1.4rem;
-        letter-spacing: 0.1;
-        line-height: 1rem;
-    }
     .help button{
         left: 90px;
-    }
-    img.close{
-        width: 20px;
-        height: 20px;
     }
 }
 @media (min-width: 480px) and (max-width: 575.98px){ 
@@ -234,64 +226,39 @@ img.close{
     }
 }
 @media (min-width: 576px) and (max-width: 999.98px){ 
-    p{
-        font-size: 1rem;
-        font-weight:400;
-        line-height: 1.7rem;
+    :root{
+        --margin: 4.4rem;
+    
+        --content-screen-width: 80%;
+    
+        --para-font-size: 1rem;
+        --para-line-height: 1.7rem;
+        --para-font-weight: 400;
+        --title-font-size: 6rem;
+        --title-letter-spacing: 0.3rem;
+        --sub-title-letter-spacing: 0.3rem;
+        --sub-title-font-size: 2rem;
+        --help-title-font-size: 1.8rem;
+        --help-title-letter-spacing: 0.1rem;
+        --help-title-line-height: 1.5rem;
+    
+        --simon-button-width: 9.4rem;
+        --simon-button-border-thickness: 0.3rem;
+        --help-icon-width: 2.2rem; 
     }
     /* Navbar */
-    .game-title{
-        margin: 50px 40px 50px;
-    }
-    .game-title h1{
-        font-size: 6rem;
-        letter-spacing: 0.3rem;
-    }
     .help-icon button{
         top: 60px;
         right:60px;
     }
-    img.help-icon{
-        width: 35px;
-        height: 35px;
-    }
     /* Content */
-    .content{
-        width: 80%;
-        margin: 70px auto;
-    }
-    .content h1{
-        font-size: 2rem;
-        letter-spacing: 0.3rem;
-    }
     .list{
         padding: 20px;
         margin: 0px;
     }
-    .row{
-        margin: 70px 10px 20px;
-    }
-    .btn{
-        width: 150px;
-        height: 150px;
-        border: 5px outset;
-    }
     /* Help */
-    #help-popup{
-        width: 70%;
-        padding: 20px;
-    }
-    .help h1{
-        font-size: 1.8rem;
-        letter-spacing: 0.1;
-        line-height: 1.5rem;
-    }
     .help button{
         left: 175px;
-    }
-    img.close{
-        width: 25px;
-        height: 25px;
     }
 } 
 @media (min-width: 750px) and (max-width: 999.98px){
@@ -300,64 +267,34 @@ img.close{
     }
 } 
 @media (min-width: 1000px) and (max-width: 1399px){
-    p{
-        font-size: 1.1rem;
-        font-weight:400;
-        line-height: 1.9rem;
-    }
-    /* Navbar */
-    .game-title{
-        margin: 0px 120px 30px;
-    }
-    .game-title h1{
-        font-size: 6rem;
-        letter-spacing: 0.5rem;
-    }
-    .help-icon button{
-        top: 80px;
-        right:80px;
-    }
-    img.help-icon{
-        width: 45px;
-        height: 45px;
+    :root{
+        --margin: 7.5rem;
+    
+        --content-screen-width: 70%;
+    
+        --para-font-size: 1.1rem;
+        --para-line-height: 1.9rem;
+        --para-font-weight: 400;
+        --title-font-size: 6rem;
+        --title-letter-spacing: 0.5rem;
+        --sub-title-letter-spacing: 0.5rem;
+        --sub-title-font-size: 2.2rem;
+        --help-title-font-size: 1.9rem;
+        --help-title-letter-spacing: 0.2rem;
+        --help-title-line-height: 2rem;
+    
+        --simon-button-width: 10rem;
+        --simon-button-border-thickness: 0.3rem;
+        --help-icon-width: 5rem; 
     }
     /* Content */
-    .content{
-        width: 70%;
-        margin: 20px auto 30px;
-    }
-    .content h1{
-        font-size: 2.2rem;
-        letter-spacing: 0.5rem;
-    }
     .list{
         padding: 20px;
         margin: 0px;
     }
-    .row{
-        margin: 40px 120px 10px;
-    }
-    .btn{
-        width: 160px;
-        height: 160px;
-        border: 5px outset;
-    }
     /* Help */
-    #help-popup{
-        width: 65%;
-        padding: 20px;
-    }
-    .help h1{
-        font-size: 1.9rem;
-        letter-spacing: 0.2;
-        line-height: 2rem;
-    }
     .help button{
         left: 395px;
-    }
-    img.close{
-        width: 30px;
-        height: 30px;
     }
 }
 @media (min-width: 1200px) and (max-width: 1399px){
@@ -366,53 +303,37 @@ img.close{
     }
 }
 @media (min-width: 1400px) and (max-width: 1599px){ 
-    p{
-        font-size: 1.1rem;
-        line-height: 1.9rem;
+    :root{
+        --margin: 7.5rem;
+    
+        --content-screen-width: 60%;
+    
+        --para-font-size: 1.1rem;
+        --para-line-height: 1.9rem;
+        --para-font-weight: 400;
+        --title-font-size: 7rem;
+        --title-letter-spacing: 0.5rem;
+        --sub-title-letter-spacing: 0.5rem;
+        --sub-title-font-size: 2.3rem;
+        --help-title-font-size: 201rem;
+        --help-title-letter-spacing: 0.2rem;
+        --help-title-line-height: 2rem;
+    
+        --simon-button-width: 11.25rem;
+        --simon-button-border-thickness: 0.44rem;
+        --help-icon-width: 5rem; 
     }
     /* Navbar */
-    .game-title{
-        margin: 20px 120px 30px;
-    }
-    .game-title h1{
-        font-size: 7rem;
-        letter-spacing: 0.5rem;
-    }
     .help-icon button{
         top: 100px;
         right:100px;
     }
     /* Content */
-    .content{
-        width: 60%;
-        margin: 30px auto 30px;
-    }
-    .content h1{
-        font-size: 2.3rem;
-        letter-spacing: 0.5rem;
-    }
     .list{
         padding: 20px;
         margin: 0px;
     }
-    .row{
-        margin: 50px 140px 20px;
-    }
-    .btn{
-        width: 180px;
-        height: 180px;
-        border: 7px outset;
-    }
     /* Help */
-    #help-popup{
-        width: 60%;
-        padding: 30px;
-    }
-    .help h1{
-        font-size: 2.1rem;
-        letter-spacing: 0.2;
-        line-height: 2rem;
-    }
     .help button{
         left: 560px;
     }
