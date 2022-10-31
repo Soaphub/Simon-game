@@ -158,6 +158,10 @@ img.help-icon{
     box-shadow: 10px 5px rgb(0,0,0,0.30);
     animation: help-bar 0.5s ease forwards;
 }
+.help-title{
+    display: flex;
+    justify-content: space-between;
+}
 .help h3{
     font-family: 'Silkscreen', cursive;
     font-size: var(--help-title-font-size);
@@ -215,15 +219,6 @@ img.close{
         padding: 10px;
         margin: 0px;
     }
-    /* Help */
-    .help button{
-        left: 90px;
-    }
-}
-@media (min-width: 480px) and (max-width: 575.98px){ 
-    .help button{
-        left: 180px;
-    }
 }
 @media (min-width: 576px) and (max-width: 999.98px){ 
     :root{
@@ -256,15 +251,6 @@ img.close{
         padding: 20px;
         margin: 0px;
     }
-    /* Help */
-    .help button{
-        left: 175px;
-    }
-} 
-@media (min-width: 750px) and (max-width: 999.98px){
-    .help button{
-        left: 295px;
-    }
 } 
 @media (min-width: 1000px) and (max-width: 1399px){
     :root{
@@ -291,15 +277,6 @@ img.close{
     .list{
         padding: 20px;
         margin: 0px;
-    }
-    /* Help */
-    .help button{
-        left: 395px;
-    }
-}
-@media (min-width: 1200px) and (max-width: 1399px){
-    .help button{
-        left: 520px;
     }
 }
 @media (min-width: 1400px) and (max-width: 1599px){ 
@@ -332,9 +309,5 @@ img.close{
     .list{
         padding: 20px;
         margin: 0px;
-    }
-    /* Help */
-    .help button{
-        left: 560px;
     }
 } 
