@@ -12,8 +12,8 @@
     --para-font-weight: bold;
     --title-font-size: 10rem;
     --title-letter-spacing: 0.8rem;
-    --sub-title-letter-spacing: 3rem;
-    --sub-title-font-size: 0.2rem;
+    --sub-title-letter-spacing: 0..2rem;
+    --sub-title-font-size: 3rem;
     --help-title-font-size: 3rem;
     --help-title-letter-spacing: 0.1rem;
     --help-title-line-height: 3.5rem;
@@ -25,6 +25,8 @@
 
 body{
     background-color: rgb(23, 23, 23);
+    font-family: 'Silkscreen', cursive;
+    color: #DA0037;
     text-align: center;
 }
 p{
@@ -32,19 +34,28 @@ p{
     font-size: var(--para-font-size);
     line-height: var(--para-line-height);
     font-weight: var(--para-font-weight);
+    color: black;
 }
-
+h1,h2,h3{
+    margin: 0px;
+}
+h1{
+    font-size: var(--title-font-size);
+    letter-spacing: var(--title-letter-spacing);
+}
+h2{
+    font-size: var(--sub-title-font-size);
+    letter-spacing: var(--sub-title-letter-spacing);
+}
+h3{
+    font-size: var(--help-title-font-size);
+    letter-spacing: var(--help-title-letter-spacing);
+    line-height: var(--help-title-line-height);
+}
 
 /* Navbar */
 .game-title{
     margin: var(--margin) 0;
-}
-.game-title h1{
-    margin: 0px;
-    font-family: 'Silkscreen', cursive;
-    font-size: var(--title-font-size);
-    letter-spacing: var(--title-letter-spacing);
-    color: #DA0037;
 }
 .help-icon button{
     background-color: #171717;
@@ -69,9 +80,6 @@ img.help-icon{
 }
 .content h2{
     margin: 0px;
-    font-family: 'Silkscreen', cursive;
-    font-size: var(--sub-title-font-size);
-    letter-spacing: var(--sub-title-letter-spacing);
     color: #DA0037;
 }
 .row{
@@ -81,7 +89,7 @@ img.help-icon{
 }
 .btn{
     width: var(--simon-button-width);
-    height: var(var(--simon-button-width));
+    height: var(--simon-button-width);
     margin: auto;
     border-radius: 30px;
     border: var(--simon-button-border-thickness) outset;
@@ -138,7 +146,8 @@ img.help-icon{
 
 /* Help */
 .help-title{
-    display: inline-block;
+    display: flex;
+    justify-content: space-between;
 }
 #blur{
     width: 100%;
@@ -157,17 +166,6 @@ img.help-icon{
     border-radius: var(--simon-button-border-thickness);
     box-shadow: 10px 5px rgb(0,0,0,0.30);
     animation: help-bar 0.5s ease forwards;
-}
-.help-title{
-    display: flex;
-    justify-content: space-between;
-}
-.help h3{
-    font-family: 'Silkscreen', cursive;
-    font-size: var(--help-title-font-size);
-    letter-spacing: var(--help-title-letter-spacing);
-    line-height: var(--help-title-line-height);
-    color: #DA0037;
 }
 .help button{
     border: 0px;
