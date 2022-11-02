@@ -179,8 +179,8 @@ img.close{
     :root{
         --content-screen-width: 100%;
     
-        --para-font-size: 0.9rem;
-        --para-line-height: 1.4rem;
+        --para-font-size: 0.8rem;
+        --para-line-height: 1rem;
         --para-font-weight: 400;
         --title-font-size: 4rem;
         --title-line-height: 4.5rem;
@@ -193,13 +193,16 @@ img.close{
         --simon-button-border-thickness: 0.2rem;
         --help-icon-width: 1.5rem; 
     }
+    #help-popup{
+        padding: 0.5rem;
+    }
 }
 @media (min-width: 576px) and (max-width: 1199.98px){ 
     :root{
         --content-screen-width: 70%;
     
-        --para-font-size: 1rem;
-        --para-line-height: 1.7rem;
+        --para-font-size: 0.9rem;
+        --para-line-height: 1.3rem;
         --para-font-weight: 400;
         --title-font-size: 6rem;
         --title-line-height: 6.5rem;
@@ -211,6 +214,9 @@ img.close{
         --simon-button-width: 9rem;
         --simon-button-border-thickness: 0.3rem;
         --help-icon-width: 2rem; 
+    }
+    #help-popup{
+        padding: 1rem;
     }
 } 
 @media (min-width: 1200px) and (max-width: 1599px){ 
