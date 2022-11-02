@@ -144,7 +144,7 @@ img.help-icon{
     padding: var(--sub-title-line-height);
     background-color:antiquewhite;
     width: var(--content-screen-width);
-    position: relative;
+    position: absolute;
     transform: translate(-50%,-50%);
     border-radius: 30px;
     box-shadow: 10px 5px rgb(0,0,0,0.30);
