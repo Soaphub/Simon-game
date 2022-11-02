@@ -10,7 +10,7 @@
     --para-font-weight: bold;
     --title-font-size: 10rem;
     --title-letter-spacing: 0.8rem;
-    --title-line-height: 10.5rem;
+    --title-line-height: 5rem;
     --sub-title-font-size: 3rem;
     --sub-title-letter-spacing: 0.4rem;
     --sub-title-line-height: 3.5rem;
@@ -45,20 +45,18 @@ h2{
 }
 
 /* Navbar */
-.help button{
-    background-color: #171717;
+#help-button{
     position: absolute;
     top: calc( var(--title-line-height) / 2); 
     right: 10%;
     border: 0px;
+    padding: 2px;
     background-color:antiquewhite;
     border-radius: 100%;
 }
 img.help-icon{
     width: var(--help-icon-width);
     height: var(--help-icon-width);
-    background-color: white;
-    border-radius: 50%;
 }
 
 
@@ -70,7 +68,7 @@ img.help-icon{
 .row{
     margin: var(--sub-title-line-height) 0;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 .btn{
     width: var(--simon-button-width);
