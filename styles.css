@@ -165,7 +165,7 @@ img.help-icon{
         opacity: 1;
     }
 }
-#help-popup button{
+.help-title button{
     background-color: antiquewhite;
     border: 0px;
 }
