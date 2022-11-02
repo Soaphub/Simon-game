@@ -48,9 +48,10 @@ h2{
 .help button{
     background-color: #171717;
     position: absolute;
-    top: calc( var(--title-line-height) + calc( var(--title-font-size) / 2)); 
+    top: calc( var(--title-line-height) / 2); 
     right: 10%;
-    border-width: 0px;
+    border: 0px;
+    background-color:antiquewhite;
     border-radius: 100%;
 }
 img.help-icon{
@@ -66,11 +67,8 @@ img.help-icon{
     width: var(--content-screen-width);
     margin: auto;
 }
-.table{
-    display: flex;
-    align-content: space-around;
-}
 .row{
+    margin: var(--sub-title-line-height) 0;
     display: flex;
     justify-content: space-around;
 }
@@ -134,6 +132,7 @@ img.help-icon{
 .help-title{
     display: flex;
     justify-content: space-between;
+    align-content: center;
 }
 #blur{
     width: 100%;
@@ -167,10 +166,6 @@ img.help-icon{
         visibility:visible;
         opacity: 1;
     }
-}
-.help button{
-    border: 0px;
-    background-color:antiquewhite;
 }
 img.close{
     width: var(--help-icon-width);
