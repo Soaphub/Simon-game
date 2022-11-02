@@ -177,7 +177,7 @@ img.close{
 
 @media (max-width: 575.98px) { 
     :root{
-        --content-screen-width: 80%;
+        --content-screen-width: 100%;
     
         --para-font-size: 0.9rem;
         --para-line-height: 1.4rem;
