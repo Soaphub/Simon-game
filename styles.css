@@ -3,8 +3,6 @@
 }
 
 :root{
-    --margin: 3.1rem;
-
     --content-screen-width: 50%;
 
     --para-font-size: 1.2rem;
@@ -12,15 +10,14 @@
     --para-font-weight: bold;
     --title-font-size: 10rem;
     --title-letter-spacing: 0.8rem;
-    --sub-title-letter-spacing: 0..2rem;
+    --title-line-height: 10.5rem;
     --sub-title-font-size: 3rem;
-    --help-title-font-size: 3rem;
-    --help-title-letter-spacing: 0.1rem;
-    --help-title-line-height: 3.5rem;
+    --sub-title-letter-spacing: 0.4rem;
+    --sub-title-line-height: 3.5rem;
 
     --simon-button-width: 12.5rem;
     --simon-button-border-thickness: 0.6rem;
-    --help-icon-width: 3.1rem; 
+    --help-icon-width: 2.5rem; 
 }
 
 body{
@@ -36,31 +33,22 @@ p{
     font-weight: var(--para-font-weight);
     color: black;
 }
-h1,h2,h3{
-    margin: 0px;
-}
 h1{
     font-size: var(--title-font-size);
     letter-spacing: var(--title-letter-spacing);
+    line-height: var(--title-line-height);
 }
 h2{
     font-size: var(--sub-title-font-size);
     letter-spacing: var(--sub-title-letter-spacing);
-}
-h3{
-    font-size: var(--help-title-font-size);
-    letter-spacing: var(--help-title-letter-spacing);
-    line-height: var(--help-title-line-height);
+    line-height: var(--sub-title-line-height);
 }
 
 /* Navbar */
-.game-title{
-    margin: var(--margin) 0;
-}
-.help-icon button{
+.help button{
     background-color: #171717;
     position: absolute;
-    top: calc( var(--margin) + calc( var(--title-font-size) / 2));
+    top: calc( var(--title-line-height) + calc( var(--title-font-size) / 2)); 
     right: 10%;
     border-width: 0px;
     border-radius: 100%;
@@ -78,19 +66,17 @@ img.help-icon{
     width: var(--content-screen-width);
     margin: auto;
 }
-.content h2{
-    margin: 0px;
-    color: #DA0037;
+.table{
+    display: flex;
+    align-content: space-around;
 }
 .row{
     display: flex;
-    flex-direction: row;
-    margin: var(--margin) calc(var(--margin) * 2);
+    justify-content: space-around;
 }
 .btn{
     width: var(--simon-button-width);
     height: var(--simon-button-width);
-    margin: auto;
     border-radius: 30px;
     border: var(--simon-button-border-thickness) outset;
 }
@@ -114,9 +100,6 @@ img.help-icon{
     animation: press 0.5s ease forwards;
     border:  var(--simon-button-border-thickness) ridge;
 }
-.game-over{
-    animation: over 0.5s ease 2 forwards;
-}
 @keyframes press {
     0%{
         transform: scale(1);
@@ -133,6 +116,9 @@ img.help-icon{
     100%{
         transform: scale(1);
     }
+}
+.game-over{
+    animation: over 0.5s ease 2 forwards;
 }
 @keyframes over {
     from{
@@ -158,22 +144,14 @@ img.help-icon{
 }
 #help-popup{
     text-align: left;
-    padding: var(--margin);
+    padding: var(--sub-title-line-height);
     background-color:antiquewhite;
     width: var(--content-screen-width);
     position: relative;
     transform: translate(-50%,-50%);
-    border-radius: var(--simon-button-border-thickness);
+    border-radius: 30px;
     box-shadow: 10px 5px rgb(0,0,0,0.30);
     animation: help-bar 0.5s ease forwards;
-}
-.help button{
-    border: 0px;
-    background-color:antiquewhite;
-}
-img.close{
-    width: var(--help-icon-width);
-    height: var(--help-icon-width);
 }
 @keyframes help-bar {
     0%{
@@ -190,13 +168,19 @@ img.close{
         opacity: 1;
     }
 }
+.help button{
+    border: 0px;
+    background-color:antiquewhite;
+}
+img.close{
+    width: var(--help-icon-width);
+    height: var(--help-icon-width);
+}
 
 
 @media (max-width: 575.98px) { 
     :root{
-        --margin: 1.9rem;
-    
-        --content-screen-width: 80%;
+        --content-screen-width: 90%;
     
         --para-font-size: 0.9rem;
         --para-line-height: 1.4rem;
@@ -205,107 +189,46 @@ img.close{
         --title-letter-spacing: 0.2rem;
         --sub-title-letter-spacing: 0.1rem;
         --sub-title-font-size: 1.5rem;
-        --help-title-font-size: 1.4rem;
-        --help-title-letter-spacing: 0.1rem;
-        --help-title-line-height: 1rem;
+        --sub-title-line-height: 2rem;
     
         --simon-button-width: 7.5rem;
         --simon-button-border-thickness: 0.2rem;
-        --help-icon-width: 1.9rem; 
-    }
-    .list{
-        padding: 10px;
-        margin: 0px;
+        --help-icon-width: 1rem; 
     }
 }
-@media (min-width: 576px) and (max-width: 999.98px){ 
+@media (min-width: 576px) and (max-width: 1199.98px){ 
     :root{
-        --margin: 4.4rem;
-    
         --content-screen-width: 80%;
     
         --para-font-size: 1rem;
         --para-line-height: 1.7rem;
         --para-font-weight: 400;
         --title-font-size: 6rem;
-        --title-letter-spacing: 0.3rem;
-        --sub-title-letter-spacing: 0.3rem;
+        --title-letter-spacing: 0.4rem;
+        --sub-title-letter-spacing: 0.2rem;
         --sub-title-font-size: 2rem;
-        --help-title-font-size: 1.8rem;
-        --help-title-letter-spacing: 0.1rem;
-        --help-title-line-height: 1.5rem;
+        --sub-title-line-height: 2.5rem;
     
         --simon-button-width: 9.4rem;
         --simon-button-border-thickness: 0.3rem;
-        --help-icon-width: 2.2rem; 
-    }
-    /* Navbar */
-    .help-icon button{
-        top: 60px;
-        right:60px;
-    }
-    /* Content */
-    .list{
-        padding: 20px;
-        margin: 0px;
+        --help-icon-width: 1.5rem; 
     }
 } 
-@media (min-width: 1000px) and (max-width: 1399px){
+@media (min-width: 1200px) and (max-width: 1599px){ 
     :root{
-        --margin: 7.5rem;
-    
         --content-screen-width: 70%;
     
         --para-font-size: 1.1rem;
         --para-line-height: 1.9rem;
         --para-font-weight: 400;
-        --title-font-size: 6rem;
-        --title-letter-spacing: 0.5rem;
-        --sub-title-letter-spacing: 0.5rem;
-        --sub-title-font-size: 2.2rem;
-        --help-title-font-size: 1.9rem;
-        --help-title-letter-spacing: 0.2rem;
-        --help-title-line-height: 2rem;
-    
-        --simon-button-width: 10rem;
-        --simon-button-border-thickness: 0.3rem;
-        --help-icon-width: 5rem; 
-    }
-    /* Content */
-    .list{
-        padding: 20px;
-        margin: 0px;
-    }
-}
-@media (min-width: 1400px) and (max-width: 1599px){ 
-    :root{
-        --margin: 7.5rem;
-    
-        --content-screen-width: 60%;
-    
-        --para-font-size: 1.1rem;
-        --para-line-height: 1.9rem;
-        --para-font-weight: 400;
         --title-font-size: 7rem;
-        --title-letter-spacing: 0.5rem;
-        --sub-title-letter-spacing: 0.5rem;
-        --sub-title-font-size: 2.3rem;
-        --help-title-font-size: 201rem;
-        --help-title-letter-spacing: 0.2rem;
-        --help-title-line-height: 2rem;
+        --title-letter-spacing: 0.6rem;
+        --sub-title-letter-spacing: 0.3rem;
+        --sub-title-font-size: 2.5rem;
+        --sub-title-line-height: 3rem;
     
         --simon-button-width: 11.25rem;
         --simon-button-border-thickness: 0.44rem;
-        --help-icon-width: 5rem; 
-    }
-    /* Navbar */
-    .help-icon button{
-        top: 100px;
-        right:100px;
-    }
-    /* Content */
-    .list{
-        padding: 20px;
-        margin: 0px;
+        --help-icon-width: 2rem; 
     }
 } 

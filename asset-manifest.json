@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/Simon-game/static/js/main.6af39eb5.js",
+    "main.js": "/Simon-game/static/js/main.24cb13aa.js",
     "index.html": "/Simon-game/index.html",
-    "main.6af39eb5.js.map": "/Simon-game/static/js/main.6af39eb5.js.map"
+    "main.24cb13aa.js.map": "/Simon-game/static/js/main.24cb13aa.js.map"
   },
   "entrypoints": [
-    "static/js/main.6af39eb5.js"
+    "static/js/main.24cb13aa.js"
   ]
 }
